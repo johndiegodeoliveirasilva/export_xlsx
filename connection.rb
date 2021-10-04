@@ -2,7 +2,6 @@ require 'mysql2'
 
 class Connection
   attr_reader :host, :database, :username, :password
-
   def initialize
     @host = String('localhost')
     @database = String('ibcsystem_development')
@@ -23,10 +22,5 @@ class Connection
       puts e.message
     end               
     client
-  end
-
-  def close
-    client.close # Cleanup
-    puts 'Done.'
   end
 end
