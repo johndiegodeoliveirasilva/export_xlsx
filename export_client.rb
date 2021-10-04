@@ -15,7 +15,7 @@ resultQuery = client.query("SELECT clientes.id,
                             INNER JOIN `atendimentosites` 
                             ON `atendimentosites`.`id` = `atendimentosite_clientes`.`atendimentosite_id` 
                             WHERE `atendimentosites`.`id` = 720597")
-
+client.close
 ################################# Export XLSX
 
 columns = resultQuery.first.keys
