@@ -4,9 +4,9 @@ class Connection
   attr_reader :host, :database, :username, :password
   def initialize
     @host = String('localhost')
-    @database = String('ibcsystem_development')
-    @username = String('root')
-    @password = String('Toor@processo_zumbi38!')
+    @database = String(ENV["database"])
+    @username = String(ENV["username"])
+    @password = String(ENV["passwd"])
   end
 
 
